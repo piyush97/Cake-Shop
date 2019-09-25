@@ -1,5 +1,5 @@
 const BUY_CAKE = "BUY_CAKE";
-
+// Action
 function buyCake() {
   return {
     type: BUY_CAKE,
@@ -10,7 +10,7 @@ function buyCake() {
 const initalState = {
   numOfCakes: 10
 };
-
+// Reducer
 const reducer = (state = initalState, action) => {
   switch (action.type) {
     case BUY_CAKE:
@@ -22,3 +22,5 @@ const reducer = (state = initalState, action) => {
       return state;
   }
 };
+
+// Store
