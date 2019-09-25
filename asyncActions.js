@@ -1,3 +1,6 @@
+const redux = require("redux");
+const createStore = redux.createStore;
+
 const initialState = {
   loading: false,
   users: [],
@@ -28,7 +31,7 @@ const fetchUsersFailure = error => {
   };
 };
 
-const reducerName = (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_USERS_REQUEST:
       return {
@@ -52,3 +55,5 @@ const reducerName = (state = initialState, action) => {
       return state;
   }
 };
+
+const store = createStore(reducer);
