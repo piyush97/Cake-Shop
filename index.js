@@ -28,3 +28,4 @@ const reducer = (state = initalState, action) => {
 
 // Store
 const store = createStore(reducer);
+console.log("initial state", store.getState());
